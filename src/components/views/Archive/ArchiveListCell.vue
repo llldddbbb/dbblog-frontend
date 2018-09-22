@@ -10,18 +10,18 @@
 </template>
 
 <script type="text/ecmascript-6">
- export default {
-   props: {
-     article: {
-       Type: Object
-     }
-   },
-   filters: {
-     formateDate: function (date) {
-       return date.slice(0, 10);
-     }
-   }
- };
+export default {
+  props: {
+    article: {
+      Type: Object
+    }
+  },
+  filters: {
+    formateDate: function (date) {
+      return date.slice(0, 10)
+    }
+  }
+}
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">

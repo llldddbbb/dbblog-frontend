@@ -7,17 +7,17 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import MovieRecomendListCell from '@/components/views/Movie/MovieRecomendListCell';
-  import MovieRecentListCell from '@/components/views/Movie/MovieRecentListCell';
-  import MovieListCell from '@/components/views/Movie/MovieListCell';
+import MovieRecomendListCell from '@/components/views/Movie/MovieRecomendListCell'
+import MovieRecentListCell from '@/components/views/Movie/MovieRecentListCell'
+import MovieListCell from '@/components/views/Movie/MovieListCell'
 
-  export default {
-    components: {
-      'movie-recomend-list-cell': MovieRecomendListCell,
-      'movie-recent-list-cell': MovieRecentListCell,
-      'movie-list-cell': MovieListCell
-    }
-  };
+export default {
+  components: {
+    'movie-recomend-list-cell': MovieRecomendListCell,
+    'movie-recent-list-cell': MovieRecentListCell,
+    'movie-list-cell': MovieListCell
+  }
+}
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">

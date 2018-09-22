@@ -1,2 +1,2 @@
-import MoviePageContent from './MoviePageContent.vue';
-export default MoviePageContent;
+import MoviePageContent from './MoviePageContent.vue'
+export default MoviePageContent

@@ -53,41 +53,41 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import MavonEditor from '@/components/views/MavonEditor';
-  import CommentListCell from '@/components/views/Comment/CommentListCell';
-  import BrowseMore from '@/components/views/BrowseMore';
+import MavonEditor from '@/components/views/MavonEditor'
+import CommentListCell from '@/components/views/Comment/CommentListCell'
+import BrowseMore from '@/components/views/BrowseMore'
 
-  export default {
-    props: {
-      recommends: {
-        default: 1
-      },
-      theme: {
-        Type: String,
-        default: ''
-      }
+export default {
+  props: {
+    recommends: {
+      default: 1
     },
-    data() {
-      return {
-        spreadEditor: false,
-        name: '',
-        select: 'email',
-        email: '',
-        mobile: ''
-      };
-    },
-    components: {
-      'mavon-editor': MavonEditor,
-      'comment-cell-list': CommentListCell,
-      'browse-more': BrowseMore
-    },
-    methods: {
-      valueChanged(flag) {
-        console.log(flag);
-        this.spreadEditor = flag;
-      }
+    theme: {
+      Type: String,
+      default: ''
     }
-  };
+  },
+  data () {
+    return {
+      spreadEditor: false,
+      name: '',
+      select: 'email',
+      email: '',
+      mobile: ''
+    }
+  },
+  components: {
+    'mavon-editor': MavonEditor,
+    'comment-cell-list': CommentListCell,
+    'browse-more': BrowseMore
+  },
+  methods: {
+    valueChanged (flag) {
+      console.log(flag)
+      this.spreadEditor = flag
+    }
+  }
+}
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>

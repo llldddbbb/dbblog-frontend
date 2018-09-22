@@ -125,28 +125,27 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import SideBar from '@/components/header/SimpleHeader/SideBar';
+import SideBar from '@/components/header/SimpleHeader/SideBar'
 
-  export default {
-    components: {
-      'sidebar': SideBar
-    },
-    mounted: function () {
-      this.$nextTick(function () {
-        this.initMobileMenu();
-      });
-    },
-    methods: {
-      initMobileMenu() {
-        // 显示手机端的菜单
-        var sidebar = this.$refs.sidebar;
-        this.$refs.menubutton.addEventListener('click', function () {
-          sidebar.openSideBar();
-        });
-      }
+export default {
+  components: {
+    'sidebar': SideBar
+  },
+  mounted: function () {
+    this.$nextTick(function () {
+      this.initMobileMenu()
+    })
+  },
+  methods: {
+    initMobileMenu () {
+      // 显示手机端的菜单
+      var sidebar = this.$refs.sidebar
+      this.$refs.menubutton.addEventListener('click', function () {
+        sidebar.openSideBar()
+      })
     }
   }
-  ;
+}
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">

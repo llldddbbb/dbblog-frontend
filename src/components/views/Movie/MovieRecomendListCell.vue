@@ -106,13 +106,13 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import MovieListItem from '@/components/views/Movie/MovieListItem';
+import MovieListItem from '@/components/views/Movie/MovieListItem'
 
-  export default {
-    components: {
-      'movie-list-item': MovieListItem
-    }
-  };
+export default {
+  components: {
+    'movie-list-item': MovieListItem
+  }
+}
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">

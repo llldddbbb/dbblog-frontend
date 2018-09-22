@@ -214,49 +214,49 @@ actions: {
 </template>
 
 <script type="text/ecmascript-6">
-  import MoviePageHeader from '@/components/views/Movie/MoviePageHeader';
-  import MoviePageContent from '@/components/views/Movie/MoviePageContent';
-  import SideToc from '@/components/views/SideToc';
-  import Recommend from '@/components/views/Recommend';
-  // highlight.js引入
-  import hljs from 'highlight.js';
-  // 样式文件
-  import 'highlight.js/styles/zenburn.css';
-  // TOC滚动监听
-  import TocScrollSpy from '@/common/js/TocScrollSpy';
+import MoviePageHeader from '@/components/views/Movie/MoviePageHeader'
+import MoviePageContent from '@/components/views/Movie/MoviePageContent'
+import SideToc from '@/components/views/SideToc'
+import Recommend from '@/components/views/Recommend'
+// highlight.js引入
+import hljs from 'highlight.js'
+// 样式文件
+import 'highlight.js/styles/zenburn.css'
+// TOC滚动监听
+import TocScrollSpy from '@/common/js/TocScrollSpy'
 
-  var HLJS = hljs;
+var HLJS = hljs
 
-  export default {
-    components: {
-      'movie-page-header': MoviePageHeader,
-      'movie-page-content': MoviePageContent,
-      'side-toc': SideToc,
-      'recommend': Recommend
+export default {
+  components: {
+    'movie-page-header': MoviePageHeader,
+    'movie-page-content': MoviePageContent,
+    'side-toc': SideToc,
+    'recommend': Recommend
+  },
+  mounted: function () {
+    this.addCodeLineNumber()
+    this.addTocScrollSpy()
+  },
+  methods: {
+    addTocScrollSpy () {
+      /* eslint-disable */
+      new TocScrollSpy('article-main-page', 'side-toc', {
+        'spayLevel': 5,
+        'articleMarginTop': 60
+      });
     },
-    mounted: function () {
-      this.addCodeLineNumber();
-      this.addTocScrollSpy();
-    },
-    methods: {
-      addTocScrollSpy() {
-        /* eslint-disable */
-        new TocScrollSpy('article-main-page', 'side-toc', {
-          'spayLevel': 5,
-          'articleMarginTop': 60
-        });
-      },
-      addCodeLineNumber() {
-        // 添加行号
-        let blocks = this.$refs.article.querySelectorAll('pre code');
-        blocks.forEach((block) => {
-          HLJS.highlightBlock(block);
-          // 去前后空格并添加行号
-          block.innerHTML = '<ul><li>' + block.innerHTML.replace(/(^\s*)|(\s*$)/g, '').replace(/\n/g, '\n</li><li>') + '\n</li></ul>';
-        });
-      }
+    addCodeLineNumber() {
+      // 添加行号
+      let blocks = this.$refs.article.querySelectorAll('pre code');
+      blocks.forEach((block) => {
+        HLJS.highlightBlock(block);
+        // 去前后空格并添加行号
+        block.innerHTML = '<ul><li>' + block.innerHTML.replace(/(^\s*)|(\s*$)/g, '').replace(/\n/g, '\n</li><li>') + '\n</li></ul>';
+      });
     }
-  };
+  }
+};
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">

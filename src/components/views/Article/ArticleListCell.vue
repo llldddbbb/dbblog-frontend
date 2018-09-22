@@ -35,49 +35,49 @@
 </template>
 
 <script type="text/ecmascript-6">
-  const ARTICLE_TYPE_BIG_IMAGE = 2;
-  const ARTICLE_TYPE_NO_IMAGE = 3;
+const ARTICLE_TYPE_BIG_IMAGE = 2
+const ARTICLE_TYPE_NO_IMAGE = 3
 
-  export default {
-    props: {
-      article: {
-        Type: Object
+export default {
+  props: {
+    article: {
+      Type: Object
+    }
+  },
+  computed: {
+    textOrderType: function () {
+      return this.article.type === ARTICLE_TYPE_BIG_IMAGE ? 2 : 1
+    },
+    imgOrderType: function () {
+      return this.article.type === ARTICLE_TYPE_BIG_IMAGE ? 1 : 2
+    },
+    textSpan: function () {
+      if (this.article.type === ARTICLE_TYPE_BIG_IMAGE) {
+        return 24
+      } else if (this.article.type === ARTICLE_TYPE_NO_IMAGE) {
+        return 24
+      } else {
+        return 17
       }
     },
-    computed: {
-      textOrderType: function () {
-        return this.article.type === ARTICLE_TYPE_BIG_IMAGE ? 2 : 1;
-      },
-      imgOrderType: function () {
-        return this.article.type === ARTICLE_TYPE_BIG_IMAGE ? 1 : 2;
-      },
-      textSpan: function () {
-        if (this.article.type === ARTICLE_TYPE_BIG_IMAGE) {
-          return 24;
-        } else if (this.article.type === ARTICLE_TYPE_NO_IMAGE) {
-          return 24;
-        } else {
-          return 17;
-        }
-      },
-      imgSpan: function () {
-        if (this.article.type === ARTICLE_TYPE_BIG_IMAGE) {
-          return 24;
-        } else if (this.article.type === ARTICLE_TYPE_NO_IMAGE) {
-          return 0;
-        } else {
-          return 7;
-        }
-      },
-      themeClass: function () {
-        if (this.article.type === ARTICLE_TYPE_BIG_IMAGE) {
-          return 'big-image';
-        } else {
-          return '';
-        }
+    imgSpan: function () {
+      if (this.article.type === ARTICLE_TYPE_BIG_IMAGE) {
+        return 24
+      } else if (this.article.type === ARTICLE_TYPE_NO_IMAGE) {
+        return 0
+      } else {
+        return 7
+      }
+    },
+    themeClass: function () {
+      if (this.article.type === ARTICLE_TYPE_BIG_IMAGE) {
+        return 'big-image'
+      } else {
+        return ''
       }
     }
-  };
+  }
+}
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>

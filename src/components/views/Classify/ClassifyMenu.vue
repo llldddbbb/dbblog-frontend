@@ -96,6 +96,4 @@
           &.active
             color $color-gradually-gray-101
             background $color-gradually-gray-31
-
-
 </style>

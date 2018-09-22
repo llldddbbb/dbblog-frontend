@@ -14,27 +14,27 @@
 </template>
 
 <script type="text/ecmascript-6">
-  export default {
-    props: {
-      tipText: {
-        default: '浏览更多'
-      }
-    },
-    data() {
-      return {
-        loading: false
-      };
-    },
-    methods: {
-      browseMore() {
-        this.loading = true;
-        var that = this;
-        setTimeout(function () {
-          that.loading = false;
-        }, 3000);
-      }
+export default {
+  props: {
+    tipText: {
+      default: '浏览更多'
     }
-  };
+  },
+  data () {
+    return {
+      loading: false
+    }
+  },
+  methods: {
+    browseMore () {
+      this.loading = true
+      var that = this
+      setTimeout(function () {
+        that.loading = false
+      }, 3000)
+    }
+  }
+}
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">

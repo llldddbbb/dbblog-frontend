@@ -15,13 +15,13 @@
 </template>
 
 <script type="text/ecmascript-6">
-  export default {
-    methods: {
-      refresh() {
-        console.log('refresh');
-      }
+export default {
+  methods: {
+    refresh () {
+      console.log('refresh')
     }
-  };
+  }
+}
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
@@ -47,6 +47,5 @@
         cursor pointer
         &:hover
           color $color-main-primary
-
 
 </style>

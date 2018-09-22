@@ -9,29 +9,29 @@
 </template>
 
 <script type="text/ecmascript-6">
-  export default {
-    props: {
-      dateType: {
-        default: 'year'
-      },
-      date: '',
-      count: '',
-      tipText: {
-        default: 'View All'
-      }
+export default {
+  props: {
+    dateType: {
+      default: 'year'
     },
-    computed: {
-      styleType() {
-        return 'style-date-' + this.dateType;
-      },
-      iconType () {
-        return {
-          'ivu-icon-calendar': this.dateType === 'year',
-          'ivu-icon-clock': this.dateType === 'month'
-        };
+    date: '',
+    count: '',
+    tipText: {
+      default: 'View All'
+    }
+  },
+  computed: {
+    styleType () {
+      return 'style-date-' + this.dateType
+    },
+    iconType () {
+      return {
+        'ivu-icon-calendar': this.dateType === 'year',
+        'ivu-icon-clock': this.dateType === 'month'
       }
     }
-  };
+  }
+}
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">

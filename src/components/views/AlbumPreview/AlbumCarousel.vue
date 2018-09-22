@@ -100,136 +100,136 @@
 </template>
 
 <script type="text/ecmascript-6">
-  export default {
-    data() {
-      return {
-        index: 0,
-        timer: null,
-        picBox: null,
-        listBox: null
-      };
+export default {
+  data () {
+    return {
+      index: 0,
+      timer: null,
+      picBox: null,
+      listBox: null
+    }
+  },
+  methods: {
+    prev () {
+      console.log('prev')
+      this.index--
+      this.index = this.index === -1 ? this.listBox.lis.length - 1 : this.index
+      this.Change()
     },
-    methods: {
-      prev() {
-        console.log('prev');
-        this.index--;
-        this.index = this.index === -1 ? this.listBox.lis.length - 1 : this.index;
-        this.Change();
-      },
-      next() {
-        console.log('next');
-        this.index++;
-        this.index = this.index === this.listBox.lis.length ? 0 : this.index;
-        this.Change();
-      },
-      onmouseover() {
-        console.log('onmouseover');
-        clearInterval(this.timer);
-      },
-      onmouseout() {
-        console.log('onmouseout');
-        this.timer = setInterval(this.autoPlay, 4000);
-      },
-      getStyle(obj, attr) {
-        if (obj.currentStyle) {
-          return obj.currentStyle[attr];
-        } else {
-          return getComputedStyle(obj, false)[attr];
-        }
-      },
-      Animate(el, options) {
-        if (el.timer) {
-          clearInterval(el.timer);
-        }
-        let that = this;
-        el.timer = setInterval(function () {
-          for (let attr in options) {
-            // 获取原属性值
-            let iCur = parseInt(that.getStyle(el, attr));
-            if (!iCur) iCur = 0;
-            // 使用现在的属性值和原属性质计算速度
-            let iSpeed = (options[attr] - iCur) / 5;
-            iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
-            el.style[attr] = iCur + iSpeed + 'px';
-            if (iCur === options[attr]) {
-              clearInterval(el.timer);
-            }
-          }
-        }, 30);
-      },
-      Change() {
-        let rowHalfCount = this.listBox.lis.length / 2;
-        let revertCount = Math.ceil(rowHalfCount / 2);
-
-        this.Animate(this.picBox.el, {
-          left: -this.index * this.picBox.liWidth
-        });
-
-        if (this.index < revertCount) {
-          this.Animate(this.listBox.el, {
-            left: 0
-          });
-        } else if (this.index + revertCount <= this.listBox.lis.length) {
-          this.Animate(this.listBox.el, {
-            left: -(this.index - revertCount + 1) * this.listBox.liWidth
-          });
-        } else {
-          this.Animate(this.listBox.el, {
-            left: -(this.listBox.lis.length - rowHalfCount) * this.listBox.liWidth
-          });
-        }
-
-        for (let i = 0; i < this.listBox.lis.length; i++) {
-          this.listBox.lis[i].className = '';
-          if (i === this.index) {
-            this.listBox.lis[i].className = 'on';
-          }
-        }
-      },
-      autoPlay() {
-        this.index++;
-        this.index = this.index === this.listBox.lis.length ? 0 : this.index;
-        this.Change();
-      },
-      initPreview() {
-        // 初始化一些值
-        this.picBox = {};
-        this.picBox.el = this.$refs.picBox;
-        this.picBox.lis = this.picBox.el.getElementsByTagName('li');
-        this.picBox.liWidth = this.picBox.lis[0].offsetWidth;
-
-        this.listBox = {};
-        this.listBox.el = this.$refs.listBox;
-        this.listBox.lis = this.listBox.el.getElementsByTagName('li');
-        this.listBox.liWidth = this.listBox.lis[0].offsetWidth;
-
-        // 宽度
-        this.picBox.el.style.width = this.picBox.lis.length * this.picBox.liWidth + 'px';
-        this.listBox.el.style.width = this.listBox.lis.length * this.listBox.liWidth + 'px';
-
-        // 重置大图li的默认宽度，因为CSS中给的100%，而此时ul宽度已改变
-        var that = this;
-        Object.keys(this.picBox.lis).forEach(function (key) {
-          that.picBox.lis[key].style.width = that.picBox.liWidth + 'px';
-        });
-
-        // 给小图添加点击事件
-        for (let i = 0; i < this.listBox.lis.length; i++) {
-          this.listBox.lis[i].index = i;
-          this.listBox.lis[i].onclick = function () {
-            that.index = this.index;
-            that.Change();
-          };
-        }
-
-        // 开启定时器
-        this.timer = setInterval(this.autoPlay, 4000);
+    next () {
+      console.log('next')
+      this.index++
+      this.index = this.index === this.listBox.lis.length ? 0 : this.index
+      this.Change()
+    },
+    onmouseover () {
+      console.log('onmouseover')
+      clearInterval(this.timer)
+    },
+    onmouseout () {
+      console.log('onmouseout')
+      this.timer = setInterval(this.autoPlay, 4000)
+    },
+    getStyle (obj, attr) {
+      if (obj.currentStyle) {
+        return obj.currentStyle[attr]
+      } else {
+        return getComputedStyle(obj, false)[attr]
       }
     },
-    mounted() {
-      this.initPreview();
+    Animate (el, options) {
+      if (el.timer) {
+        clearInterval(el.timer)
+      }
+      let that = this
+      el.timer = setInterval(function () {
+        for (let attr in options) {
+          // 获取原属性值
+          let iCur = parseInt(that.getStyle(el, attr))
+          if (!iCur) iCur = 0
+          // 使用现在的属性值和原属性质计算速度
+          let iSpeed = (options[attr] - iCur) / 5
+          iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed)
+          el.style[attr] = iCur + iSpeed + 'px'
+          if (iCur === options[attr]) {
+            clearInterval(el.timer)
+          }
+        }
+      }, 30)
+    },
+    Change () {
+      let rowHalfCount = this.listBox.lis.length / 2
+      let revertCount = Math.ceil(rowHalfCount / 2)
+
+      this.Animate(this.picBox.el, {
+        left: -this.index * this.picBox.liWidth
+      })
+
+      if (this.index < revertCount) {
+        this.Animate(this.listBox.el, {
+          left: 0
+        })
+      } else if (this.index + revertCount <= this.listBox.lis.length) {
+        this.Animate(this.listBox.el, {
+          left: -(this.index - revertCount + 1) * this.listBox.liWidth
+        })
+      } else {
+        this.Animate(this.listBox.el, {
+          left: -(this.listBox.lis.length - rowHalfCount) * this.listBox.liWidth
+        })
+      }
+
+      for (let i = 0; i < this.listBox.lis.length; i++) {
+        this.listBox.lis[i].className = ''
+        if (i === this.index) {
+          this.listBox.lis[i].className = 'on'
+        }
+      }
+    },
+    autoPlay () {
+      this.index++
+      this.index = this.index === this.listBox.lis.length ? 0 : this.index
+      this.Change()
+    },
+    initPreview () {
+      // 初始化一些值
+      this.picBox = {}
+      this.picBox.el = this.$refs.picBox
+      this.picBox.lis = this.picBox.el.getElementsByTagName('li')
+      this.picBox.liWidth = this.picBox.lis[0].offsetWidth
+
+      this.listBox = {}
+      this.listBox.el = this.$refs.listBox
+      this.listBox.lis = this.listBox.el.getElementsByTagName('li')
+      this.listBox.liWidth = this.listBox.lis[0].offsetWidth
+
+      // 宽度
+      this.picBox.el.style.width = this.picBox.lis.length * this.picBox.liWidth + 'px'
+      this.listBox.el.style.width = this.listBox.lis.length * this.listBox.liWidth + 'px'
+
+      // 重置大图li的默认宽度，因为CSS中给的100%，而此时ul宽度已改变
+      var that = this
+      Object.keys(this.picBox.lis).forEach(function (key) {
+        that.picBox.lis[key].style.width = that.picBox.liWidth + 'px'
+      })
+
+      // 给小图添加点击事件
+      for (let i = 0; i < this.listBox.lis.length; i++) {
+        this.listBox.lis[i].index = i
+        this.listBox.lis[i].onclick = function () {
+          that.index = this.index
+          that.Change()
+        }
+      }
+
+      // 开启定时器
+      this.timer = setInterval(this.autoPlay, 4000)
     }
-  };
+  },
+  mounted () {
+    this.initPreview()
+  }
+}
 </script>`
 
 <style lang="stylus" rel="stylesheet/stylus">

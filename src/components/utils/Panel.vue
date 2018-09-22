@@ -6,13 +6,13 @@
 </template>
 
 <script type="text/ecmascript-6">
-  export default {
-    props: {
-      title: {
-        default: ''
-      }
+export default {
+  props: {
+    title: {
+      default: ''
     }
-  };
+  }
+}
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">

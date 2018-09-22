@@ -44,13 +44,13 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import Panel from '@/components/utils/Panel';
+import Panel from '@/components/utils/Panel'
 
-  export default {
-    components: {
-      'panel': Panel
-    }
-  };
+export default {
+  components: {
+    'panel': Panel
+  }
+}
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">

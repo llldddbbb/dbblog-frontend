@@ -235,32 +235,32 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import TOC from '../../../common/js/MarkdownToc';
+import TOC from '../../../common/js/MarkdownToc'
 
-  export default {
-    data() {
-      return {
-        'showMobileSideBar': false
-      };
-    },
-    methods: {
-      openSideBar() {
-        this.showMobileSideBar = !this.showMobileSideBar;
-      },
-      refreshMenu() {
-        /* eslint-disable */
-        new TOC('article-main-page', {
-          'level': 5,
-          'top': 200,
-          'class': 'list',
-          'targetId': 'sidebar-toc'
-        });
-      }
-    },
-    mounted: function () {
-      this.refreshMenu();
+export default {
+  data () {
+    return {
+      'showMobileSideBar': false
     }
-  };
+  },
+  methods: {
+    openSideBar () {
+      this.showMobileSideBar = !this.showMobileSideBar
+    },
+    refreshMenu () {
+      /* eslint-disable */
+      new TOC('article-main-page', {
+        'level': 5,
+        'top': 200,
+        'class': 'list',
+        'targetId': 'sidebar-toc'
+      });
+    }
+  },
+  mounted: function () {
+    this.refreshMenu();
+  }
+};
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">

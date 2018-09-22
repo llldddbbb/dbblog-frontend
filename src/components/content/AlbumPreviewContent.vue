@@ -12,15 +12,15 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import AlbumPreview from '@/components/views/AlbumPreview/AlbumPreview';
-  import AlbumInfos from '@/components/views/AlbumPreview/AlbumInfos';
+import AlbumPreview from '@/components/views/AlbumPreview/AlbumPreview'
+import AlbumInfos from '@/components/views/AlbumPreview/AlbumInfos'
 
-  export default {
-    components: {
-      'album-preview': AlbumPreview,
-      'album-infos': AlbumInfos
-    }
-  };
+export default {
+  components: {
+    'album-preview': AlbumPreview,
+    'album-infos': AlbumInfos
+  }
+}
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">

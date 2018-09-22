@@ -6,20 +6,20 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import LicenseTag from '@/components/views/LicenseTag';
-  import SocialSection from '@/components/views/Comment/SocialSection';
+import LicenseTag from '@/components/views/LicenseTag'
+import SocialSection from '@/components/views/Comment/SocialSection'
 
-  export default {
-    methods: {
-      onSubmit() {
-        console.log('submit!');
-      }
-    },
-    components: {
-      'license-tag': LicenseTag,
-      'social-section': SocialSection
+export default {
+  methods: {
+    onSubmit () {
+      console.log('submit!')
     }
-  };
+  },
+  components: {
+    'license-tag': LicenseTag,
+    'social-section': SocialSection
+  }
+}
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">

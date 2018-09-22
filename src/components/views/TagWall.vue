@@ -10,18 +10,18 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import Panel from '@/components/utils/Panel';
+import Panel from '@/components/utils/Panel'
 
-  export default {
-    data() {
-      return {
-        tags: ['iOS', '大数据', 'python', '流式计算', 'Linux', 'Big Date', 'PHP', 'iOS', '大数据', 'python', '流式计算', 'Linux', 'Big Date', 'PHP', 'iOS', '大数据', 'python', '流式计算', 'Linux', 'Big Date', 'PHP', 'iOS', '大数据', 'python', '流式计算', 'Linux', 'Big Date', 'PHP', 'iOS', '大数据', 'python', '流式计算', 'Linux', 'Big Date', 'PHP', 'iOS', '大数据', 'python', '流式计算', 'Linux', 'Big Date', 'PHP', 'iOS', '大数据', 'python', '流式计算', 'Linux', 'iOS', '大数据', 'python', 'iOS', '大数据', 'python', '流式计算', 'Linux', 'Big Date', 'PHP', 'Java', 'Spring', 'HTML', 'CSS', '流式计算', 'Linux', 'Big Date', 'PHP', '流式计算', 'Linux', 'Big Date', 'PHP']
-      };
-    },
-    components: {
-      'panel': Panel
+export default {
+  data () {
+    return {
+      tags: ['iOS', '大数据', 'python', '流式计算', 'Linux', 'Big Date', 'PHP', 'iOS', '大数据', 'python', '流式计算', 'Linux', 'Big Date', 'PHP', 'iOS', '大数据', 'python', '流式计算', 'Linux', 'Big Date', 'PHP', 'iOS', '大数据', 'python', '流式计算', 'Linux', 'Big Date', 'PHP', 'iOS', '大数据', 'python', '流式计算', 'Linux', 'Big Date', 'PHP', 'iOS', '大数据', 'python', '流式计算', 'Linux', 'Big Date', 'PHP', 'iOS', '大数据', 'python', '流式计算', 'Linux', 'iOS', '大数据', 'python', 'iOS', '大数据', 'python', '流式计算', 'Linux', 'Big Date', 'PHP', 'Java', 'Spring', 'HTML', 'CSS', '流式计算', 'Linux', 'Big Date', 'PHP', '流式计算', 'Linux', 'Big Date', 'PHP']
     }
-  };
+  },
+  components: {
+    'panel': Panel
+  }
+}
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">

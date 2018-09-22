@@ -1,2 +1,2 @@
-import MoviePageHeader from './MoviePageHeader.vue';
-export default MoviePageHeader;
+import MoviePageHeader from './MoviePageHeader.vue'
+export default MoviePageHeader

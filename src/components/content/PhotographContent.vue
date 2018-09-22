@@ -40,19 +40,19 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import ClassifyWall from '@/components/views/Classify/ClassifyWall';
-  import SectionTitle from '@/components/views/SectionTitle/SectionTitle';
-  import ThumbCard from '@/components/views/ThumbCard';
-  import BrowseMore from '@/components/views/BrowseMore';
+import ClassifyWall from '@/components/views/Classify/ClassifyWall'
+import SectionTitle from '@/components/views/SectionTitle/SectionTitle'
+import ThumbCard from '@/components/views/ThumbCard'
+import BrowseMore from '@/components/views/BrowseMore'
 
-  export default {
-    components: {
-      'classify-wall': ClassifyWall,
-      'section-title': SectionTitle,
-      'thumb-card': ThumbCard,
-      'browse-more': BrowseMore
-    }
-  };
+export default {
+  components: {
+    'classify-wall': ClassifyWall,
+    'section-title': SectionTitle,
+    'thumb-card': ThumbCard,
+    'browse-more': BrowseMore
+  }
+}
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">

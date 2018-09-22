@@ -38,85 +38,85 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import PhotoWall from '@/components/views/PhotoWall';
-  import ArticleListCell from '@/components/views/Article/ArticleListCell';
-  import SectionTitle from '@/components/views/SectionTitle/SectionTitle';
-  import TitleMenuFilter from '@/components/views/SectionTitle/TitleMenuFilter';
-  import TopicCard from '@/components/views/TopicCard';
-  import ArticlePageHeader from '@/components/views/Article/ArticlePageHeader';
-  import ArticlePageContent from '@/components/views/Article/ArticlePageContent';
-  import ArchiveListTimeTitle from '@/components/views/Archive/ArchiveListTimeTitle';
-  import ArchiveListCell from '@/components/views/Archive/ArchiveListCell';
-  import About from '@/components/views/About';
-  import FriendLinks from '@/components/views/FriendLinks';
-  import SideToc from '@/components/views/SideToc';
+import PhotoWall from '@/components/views/PhotoWall'
+import ArticleListCell from '@/components/views/Article/ArticleListCell'
+import SectionTitle from '@/components/views/SectionTitle/SectionTitle'
+import TitleMenuFilter from '@/components/views/SectionTitle/TitleMenuFilter'
+import TopicCard from '@/components/views/TopicCard'
+import ArticlePageHeader from '@/components/views/Article/ArticlePageHeader'
+import ArticlePageContent from '@/components/views/Article/ArticlePageContent'
+import ArchiveListTimeTitle from '@/components/views/Archive/ArchiveListTimeTitle'
+import ArchiveListCell from '@/components/views/Archive/ArchiveListCell'
+import About from '@/components/views/About'
+import FriendLinks from '@/components/views/FriendLinks'
+import SideToc from '@/components/views/SideToc'
 
-  export default {
-    data() {
-      return {
-        articles: [
-          {
-            'id': 1,
-            'title': '被迫向现实低头，再爱也只能到此为止',
-            'author': '男孩与榴莲',
-            'publish_time': '2017-10-22 17:57:08',
-            'desc': '离奇消失亚伯勒郡有一条出名的“S”形单向公路，路面狭窄，两侧耸立着高大的石墙，只能容一辆车子通行',
-            'readings': '148',
-            'comments': '2',
-            'likes': '20',
-            'type': 1
-          },
-          {
-            'id': 2,
-            'title': '我曾经喜欢过一个人',
-            'author': '不能吃糖的0240',
-            'publish_time': '2017-10-22 17:57:08',
-            'desc': '离奇消失亚伯勒郡有一条出名的“S”形单向公路，路面狭窄，两侧耸立着高大的石墙，只能容一辆车子通行',
-            'readings': '148',
-            'comments': '2',
-            'likes': '20',
-            'type': 1
-          },
-          {
-            'id': 3,
-            'title': '离开你以后我还是很喜欢很喜欢你',
-            'author': 'JUNE.',
-            'publish_time': '2017-10-22 17:57:08',
-            'desc': '离奇消失亚伯勒郡有一条出名的“S”形单向公路，路面狭窄，两侧耸立着高大的石墙，只能容一辆车子通行',
-            'readings': '148',
-            'comments': '2',
-            'likes': '20',
-            'type': 2
-          },
-          {
-            'id': 4,
-            'title': '思念如马，自别离，未停蹄！相思若柳，飘满城，尽飞絮！',
-            'author': '每日小情书',
-            'publish_time': '2017-10-22 17:57:08',
-            'desc': '离奇消失亚伯勒郡有一条出名的“S”形单向公路，路面狭窄，两侧耸立着高大的石墙，只能容一辆车子通行',
-            'readings': '148',
-            'comments': '2',
-            'likes': '20',
-            'type': 3
-          }
-        ]
-      };
-    },
-    components: {
-      'photo-wall': PhotoWall,
-      'article-list-cell': ArticleListCell,
-      'section-title': SectionTitle,
-      'title-menu-filter': TitleMenuFilter,
-      'topic-card': TopicCard,
-      'article-page-header': ArticlePageHeader,
-      'article-page-content': ArticlePageContent,
-      'archive-list-time-title': ArchiveListTimeTitle,
-      'archive-list-cell': ArchiveListCell,
-      'about': About,
-      'friend-links': FriendLinks,
-      'side-toc': SideToc
+export default {
+  data () {
+    return {
+      articles: [
+        {
+          'id': 1,
+          'title': '被迫向现实低头，再爱也只能到此为止',
+          'author': '男孩与榴莲',
+          'publish_time': '2017-10-22 17:57:08',
+          'desc': '离奇消失亚伯勒郡有一条出名的“S”形单向公路，路面狭窄，两侧耸立着高大的石墙，只能容一辆车子通行',
+          'readings': '148',
+          'comments': '2',
+          'likes': '20',
+          'type': 1
+        },
+        {
+          'id': 2,
+          'title': '我曾经喜欢过一个人',
+          'author': '不能吃糖的0240',
+          'publish_time': '2017-10-22 17:57:08',
+          'desc': '离奇消失亚伯勒郡有一条出名的“S”形单向公路，路面狭窄，两侧耸立着高大的石墙，只能容一辆车子通行',
+          'readings': '148',
+          'comments': '2',
+          'likes': '20',
+          'type': 1
+        },
+        {
+          'id': 3,
+          'title': '离开你以后我还是很喜欢很喜欢你',
+          'author': 'JUNE.',
+          'publish_time': '2017-10-22 17:57:08',
+          'desc': '离奇消失亚伯勒郡有一条出名的“S”形单向公路，路面狭窄，两侧耸立着高大的石墙，只能容一辆车子通行',
+          'readings': '148',
+          'comments': '2',
+          'likes': '20',
+          'type': 2
+        },
+        {
+          'id': 4,
+          'title': '思念如马，自别离，未停蹄！相思若柳，飘满城，尽飞絮！',
+          'author': '每日小情书',
+          'publish_time': '2017-10-22 17:57:08',
+          'desc': '离奇消失亚伯勒郡有一条出名的“S”形单向公路，路面狭窄，两侧耸立着高大的石墙，只能容一辆车子通行',
+          'readings': '148',
+          'comments': '2',
+          'likes': '20',
+          'type': 3
+        }
+      ]
     }
-  };
+  },
+  components: {
+    'photo-wall': PhotoWall,
+    'article-list-cell': ArticleListCell,
+    'section-title': SectionTitle,
+    'title-menu-filter': TitleMenuFilter,
+    'topic-card': TopicCard,
+    'article-page-header': ArticlePageHeader,
+    'article-page-content': ArticlePageContent,
+    'archive-list-time-title': ArchiveListTimeTitle,
+    'archive-list-cell': ArchiveListCell,
+    'about': About,
+    'friend-links': FriendLinks,
+    'side-toc': SideToc
+  }
+}
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">

@@ -5,13 +5,13 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import AlbumCarousel from '@/components/views/AlbumPreview/AlbumCarousel';
+import AlbumCarousel from '@/components/views/AlbumPreview/AlbumCarousel'
 
-  export default {
-    components: {
-      'album-carousel': AlbumCarousel
-    }
-  };
+export default {
+  components: {
+    'album-carousel': AlbumCarousel
+  }
+}
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">

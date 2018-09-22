@@ -6,15 +6,15 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import SectionTitle from '@/components/views/SectionTitle/SectionTitle';
-  import ClassifyMenu from '@/components/views/Classify/ClassifyMenu';
+import SectionTitle from '@/components/views/SectionTitle/SectionTitle'
+import ClassifyMenu from '@/components/views/Classify/ClassifyMenu'
 
-  export default {
-    components: {
-      'section-title': SectionTitle,
-      'classify-menu': ClassifyMenu
-    }
-  };
+export default {
+  components: {
+    'section-title': SectionTitle,
+    'classify-menu': ClassifyMenu
+  }
+}
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">

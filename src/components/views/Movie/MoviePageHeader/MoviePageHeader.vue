@@ -22,24 +22,24 @@
 </template>
 
 <script type="text/ecmascript-6">
-  export default {
-    data() {
-      return {
-        article: {
-          'id': 1,
-          'title': '被迫向现实低头，再爱也只能到此为止',
-          'author': '男孩与榴莲',
-          'publish_time': '2017-10-22 17:57:08',
-          'desc': '离奇消失亚伯勒郡有一条出名的“S”形单向公路，路面狭窄，两侧耸立着高大的石墙，只能容一辆车子通行',
-          'readings': '148',
-          'comments': '2',
-          'likes': '20'
-        }
-      };
-    },
-    components: {
+export default {
+  data () {
+    return {
+      article: {
+        'id': 1,
+        'title': '被迫向现实低头，再爱也只能到此为止',
+        'author': '男孩与榴莲',
+        'publish_time': '2017-10-22 17:57:08',
+        'desc': '离奇消失亚伯勒郡有一条出名的“S”形单向公路，路面狭窄，两侧耸立着高大的石墙，只能容一辆车子通行',
+        'readings': '148',
+        'comments': '2',
+        'likes': '20'
+      }
     }
-  };
+  },
+  components: {
+  }
+}
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">

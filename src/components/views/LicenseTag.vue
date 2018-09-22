@@ -8,16 +8,16 @@
 </template>
 
 <script type="text/ecmascript-6">
-  export default {
-    props: {
-      link: {
-        default: 'https://creativecommons.org/licenses/by-sa/4.0/'
-      },
-      type: {
-        default: 'CC BY-SA 4.0'
-      }
+export default {
+  props: {
+    link: {
+      default: 'https://creativecommons.org/licenses/by-sa/4.0/'
+    },
+    type: {
+      default: 'CC BY-SA 4.0'
     }
-  };
+  }
+}
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">

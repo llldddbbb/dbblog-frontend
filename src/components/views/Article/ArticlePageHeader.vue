@@ -24,22 +24,22 @@
 </template>
 
 <script type="text/ecmascript-6">
-  export default {
-    data() {
-      return {
-        article: {
-          'id': 1,
-          'title': '被太阳晒过的风 第四十四章',
-          'author': '子夜晨星',
-          'publish_time': '2017-10-22 17:57:08',
-          'desc': '-1-见了男朋友回来之后喝了一杯没怎么泡好的红糖水和一杯满满的白开水。去上了次厕所，然后坐在床上的时候开始咳嗽不止，去洗了把脸，恍然地瞥见镜子中的自己看起来并不...',
-          'readings': '148',
-          'comments': '2',
-          'likes': '20'
-        }
-      };
+export default {
+  data () {
+    return {
+      article: {
+        'id': 1,
+        'title': '被太阳晒过的风 第四十四章',
+        'author': '子夜晨星',
+        'publish_time': '2017-10-22 17:57:08',
+        'desc': '-1-见了男朋友回来之后喝了一杯没怎么泡好的红糖水和一杯满满的白开水。去上了次厕所，然后坐在床上的时候开始咳嗽不止，去洗了把脸，恍然地瞥见镜子中的自己看起来并不...',
+        'readings': '148',
+        'comments': '2',
+        'likes': '20'
+      }
     }
-  };
+  }
+}
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">

@@ -55,67 +55,67 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import MavonEditor from '@/components/views/MavonEditor';
+import MavonEditor from '@/components/views/MavonEditor'
 
-  const CELL_LEFT_SPAN = {
-    'xs': 3,
-    'sm': 3,
-    'md': 2,
-    'lg': 2
-  };
-  const CELL_RIGHT_SPAN = {
-    'xs': 24 - CELL_LEFT_SPAN['xs'],
-    'sm': 24 - CELL_LEFT_SPAN['sm'],
-    'md': 24 - CELL_LEFT_SPAN['md'],
-    'lg': 24 - CELL_LEFT_SPAN['lg']
-  };
+const CELL_LEFT_SPAN = {
+  'xs': 3,
+  'sm': 3,
+  'md': 2,
+  'lg': 2
+}
+const CELL_RIGHT_SPAN = {
+  'xs': 24 - CELL_LEFT_SPAN['xs'],
+  'sm': 24 - CELL_LEFT_SPAN['sm'],
+  'md': 24 - CELL_LEFT_SPAN['md'],
+  'lg': 24 - CELL_LEFT_SPAN['lg']
+}
 
-  export default {
-    props: {
-      commentLevel: {
-        default: 0
-      },
-      date: '',
-      count: '',
-      tipText: {
-        default: 'View All'
-      },
-      theme: {
-        Type: String,
-        default: ''
-      }
+export default {
+  props: {
+    commentLevel: {
+      default: 0
     },
-    data() {
-      return {
-        showEditor: false,
-        spreadEditor: false
-      };
+    date: '',
+    count: '',
+    tipText: {
+      default: 'View All'
     },
-    methods: {
-      cellSpan(size) {
-        var span = {};
-        span['offset'] = CELL_LEFT_SPAN[size] * this.commentLevel;
-        span['span'] = 24 - span['offset'];
-        return span;
-      },
-      cellLeftSpan(size) {
-        var span = {};
-        span['span'] = CELL_LEFT_SPAN[size];
-        return span;
-      },
-      cellRightSpan(size) {
-        var span = {};
-        span['span'] = CELL_RIGHT_SPAN[size];
-        return span;
-      },
-      valueChanged(flag) {
-        this.spreadEditor = flag;
-      }
-    },
-    components: {
-      'mavon-editor': MavonEditor
+    theme: {
+      Type: String,
+      default: ''
     }
-  };
+  },
+  data () {
+    return {
+      showEditor: false,
+      spreadEditor: false
+    }
+  },
+  methods: {
+    cellSpan (size) {
+      var span = {}
+      span['offset'] = CELL_LEFT_SPAN[size] * this.commentLevel
+      span['span'] = 24 - span['offset']
+      return span
+    },
+    cellLeftSpan (size) {
+      var span = {}
+      span['span'] = CELL_LEFT_SPAN[size]
+      return span
+    },
+    cellRightSpan (size) {
+      var span = {}
+      span['span'] = CELL_RIGHT_SPAN[size]
+      return span
+    },
+    valueChanged (flag) {
+      this.spreadEditor = flag
+    }
+  },
+  components: {
+    'mavon-editor': MavonEditor
+  }
+}
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
